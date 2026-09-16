@@ -1,0 +1,59 @@
+---
+title: Databases
+description: Shared or dedicated Postgres — managed, your own Supabase, or bring-your-own.
+icon: Database
+---
+
+Every app can use a database. You choose the model when you
+[create a project](/docs/cloud/projects), or add one later from the app's
+**Database** page.
+
+## Shared database
+
+The default. Apps talk to Taskclan's shared Postgres through a public **anon
+key**, with access governed by row-level security and a per-app Postgres role.
+Nothing to provision — it's there from day one.
+
+<Callout>
+  The anon key is public by design (it already ships in client bundles). It maps
+  to a restricted role; isolation comes from roles, grants and RLS — never from
+  hiding the key.
+</Callout>
+
+## Dedicated database
+
+A database provisioned just for your app, stored as its `DATABASE_URL` secret.
+
+<Tabs items={["Managed", "Your own Supabase", "Bring your own"]}>
+<Tab value="Managed">
+Provision **Supabase** or **Neon** at a chosen tier; Taskclan creates the
+project and wires it up. Billed monthly to your org wallet.
+
+| Provider | Tier | Price |
+| --- | --- | --- |
+| Supabase | Starter / Standard / Pro | $13 / $18 / $63 per month |
+| Neon | Starter / Standard / Pro | Free / $9 / $29 per month |
+
+Prices shown are defaults and may change.
+</Tab>
+<Tab value="Your own Supabase">
+One-click **OAuth**: authorize your own Supabase account and a dedicated project
+is created in **your** org, then connected to the app. A small service fee
+($3/mo) applies.
+</Tab>
+<Tab value="Bring your own">
+Paste any Postgres connection string. It's stored as the app's `DATABASE_URL`
+secret and injected on the next deploy. No charge.
+</Tab>
+</Tabs>
+
+## Browsing your data
+
+Provisioned and attached databases are browsable in the console — the table
+editor, SQL editor, and schema views all work against the app's database.
+
+## Advisors
+
+The console runs **security** and **performance** advisors against your database
+and surfaces findings (missing RLS, unindexed foreign keys, and more) so you can
+fix issues before they bite.

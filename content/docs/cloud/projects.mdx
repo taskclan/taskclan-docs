@@ -1,0 +1,50 @@
+---
+title: Create a project
+description: Start an app empty or from GitHub, with an optional database.
+icon: Plus
+---
+
+A **project** is a Taskclan Cloud app. Create one from **New project** in the
+console.
+
+## Name and type
+
+Give the project a name — it becomes the app's subdomain
+(`<name>.cloud.taskclan.com`). Choose a type:
+
+- **Web service** — a running app in a container (API, SSR, backend).
+- **Static site** — prebuilt static files served from the edge.
+
+## Source
+
+<Tabs items={["Start empty", "Import from GitHub"]}>
+<Tab value="Start empty">
+Create the app now and deploy to it later. Good when you'll push from CI or set
+up the repo afterwards.
+</Tab>
+<Tab value="Import from GitHub">
+Pick a repository and Taskclan Cloud creates the app, links the repo, and kicks
+off a build. Choose the branch to deploy from. You'll need the Taskclan Cloud
+GitHub App connected to the account that owns the repo.
+</Tab>
+</Tabs>
+
+## Database
+
+Optionally attach a database at creation time (or add one later):
+
+- **No database** — use the shared database, or add one afterwards.
+- **Add a database** — a managed tier, your own Supabase, or a connection string.
+
+See [Databases](/docs/cloud/databases) for each option and its pricing.
+
+## After creating
+
+You land on the project. From there you can browse the database, edit
+[secrets](/docs/cloud/secrets), watch [deployments](/docs/cloud/deployments), and
+grab [connection details](/docs/cloud/connect).
+
+<Callout>
+  Creating an empty app is free — it reserves a subdomain and a record. A
+  dedicated database is a paid add-on, billed to your org wallet.
+</Callout>

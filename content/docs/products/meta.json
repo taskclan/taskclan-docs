@@ -1,0 +1,5 @@
+{
+  "title": "Products",
+  "icon": "Boxes",
+  "pages": ["index", "nani", "gamenova", "forge3d", "fundnest", "intelligence"]
+}

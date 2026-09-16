@@ -1,0 +1,36 @@
+---
+title: Overview
+description: The Taskclan Cloud control plane — apps, databases, and deploys.
+icon: Cloud
+---
+
+**Taskclan Cloud** is the control plane for everything you run on Taskclan. From
+the console at [cloud.taskclan.com](https://cloud.taskclan.com) you can:
+
+<Cards>
+  <Card title="Create projects" href="/docs/cloud/projects" icon="Plus">
+    Spin up an app — empty or imported from GitHub — with an optional database.
+  </Card>
+  <Card title="Provision databases" href="/docs/cloud/databases" icon="Database">
+    Shared or dedicated Postgres, managed or bring-your-own.
+  </Card>
+  <Card title="Connect your app" href="/docs/cloud/connect" icon="Plug">
+    Connection strings and keys for your framework, ORM, or agent.
+  </Card>
+  <Card title="Manage secrets" href="/docs/cloud/secrets" icon="KeyRound">
+    Per-app environment variables, injected on deploy.
+  </Card>
+  <Card title="Watch deployments" href="/docs/cloud/deployments" icon="Rocket">
+    Build status, history, and logs.
+  </Card>
+  <Card title="Custom domains" href="/docs/cloud/domains" icon="Globe">
+    Put your app on your own domain.
+  </Card>
+</Cards>
+
+## How it fits together
+
+Each app gets a subdomain on `cloud.taskclan.com`, an environment, and a
+deployment pipeline. It can use the shared database or a dedicated one. The
+console is where you wire all of that together; the [engine and APIs](/docs/api)
+are what your app calls at runtime.

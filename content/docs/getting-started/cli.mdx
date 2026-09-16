@@ -1,0 +1,46 @@
+---
+title: CLI
+description: Drive Taskclan Cloud from your terminal and CI.
+icon: SquareTerminal
+---
+
+The Taskclan CLI lets you manage apps, environments, and deployments without the
+console — useful for scripting and CI.
+
+## Install
+
+```bash
+npm install -g @taskclan/cli
+```
+
+## Authenticate
+
+Sign in with an API key from the console (an `sk_cloud_…` key). Store it in your
+environment rather than passing it on the command line:
+
+```bash
+export TASKCLAN_CLOUD_API_KEY=sk_cloud_...
+```
+
+<Callout type="warn">
+  A Cloud API key is org-wide. Keep it out of source control and out of client
+  bundles — it belongs only on servers and in CI secrets.
+</Callout>
+
+## Common commands
+
+```bash
+# List your apps
+taskclan sites list
+
+# Create an app
+taskclan sites create my-app
+
+# Tail a deployment
+taskclan deploy --site my-app
+```
+
+<Callout>
+  Command names may differ by CLI version — run `taskclan --help` for the exact
+  set available to you.
+</Callout>

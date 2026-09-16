@@ -2,6 +2,22 @@
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
+/*
+ * Taskclan brand — emerald primary (see the Taskclan design system).
+ * Overrides Fumadocs' default accent for links, buttons, active nav, and rings.
+ */
+:root {
+  --color-fd-primary: #059669; /* emerald-600 — accessible on white */
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-ring: #059669;
+}
+
+.dark {
+  --color-fd-primary: #34d399; /* emerald-400 — pops on dark */
+  --color-fd-primary-foreground: #052e1a; /* deep green text on the bright button */
+  --color-fd-ring: #34d399;
+}
+
 html {
   scrollbar-gutter: stable;
 }

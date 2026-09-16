@@ -1,0 +1,25 @@
+---
+title: Deployments
+description: Build, ship, and track your app's releases.
+icon: Rocket
+---
+
+Apps deploy through Taskclan Cloud. The project's **Deployments** view shows
+build status, history, and the live URL.
+
+## From GitHub
+
+When an app is linked to a repository, a push to the deploy branch triggers a
+build. New apps start in **manual** deploy mode — a push opens an approval to
+review before it ships. Flip an app to **automatic** to deploy on every push.
+
+## Build and roll
+
+A deploy builds the app, pushes the image, and rolls the container. Until the new
+container is serving, the previous one keeps handling traffic. The Deployments
+view reflects each stage.
+
+## Status
+
+An app is **healthy** once its latest deployment is live and serving. A failed
+build leaves the previous deploy running and surfaces the error in the view.

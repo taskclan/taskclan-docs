@@ -1,0 +1,38 @@
+---
+title: Conventions
+description: Base URLs, request and response shapes, and errors.
+icon: ListChecks
+---
+
+## Base URL
+
+```
+https://engine.taskclan.com
+```
+
+## Requests
+
+- JSON in, JSON out. Send `content-type: application/json` on writes.
+- Authorize with `authorization: Bearer <key>` (see
+  [Authentication](/docs/api/authentication)).
+
+## Responses
+
+Successful responses return the resource (or `{ ok: true }` for actions).
+Collections come back under a named key, for example:
+
+```json
+{ "sites": [ { "id": "…", "name": "…", "subdomain": "…" } ] }
+```
+
+## Errors
+
+Errors return a non-2xx status and a JSON body with a human-readable message:
+
+```json
+{ "error": "name is required" }
+```
+
+The engine passes through actionable messages (insufficient credits, a role that
+can't perform the action, an invalid connection string) rather than a bare
+status — read the `error` field.

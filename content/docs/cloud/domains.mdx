@@ -1,0 +1,33 @@
+---
+title: Custom domains
+description: Put your app on your own domain.
+icon: Globe
+---
+
+Every app is reachable at `<name>.cloud.taskclan.com`. To serve it from your own
+domain, add a custom domain on the project's settings.
+
+<Steps>
+<Step>
+### Add the domain
+
+Enter your domain (e.g. `app.example.com`) in the project's domain settings.
+</Step>
+<Step>
+### Point DNS
+
+Create the DNS record Taskclan shows you (a `CNAME` to your app's Cloud
+hostname). Certificates are issued automatically once DNS resolves.
+</Step>
+<Step>
+### Verify
+
+Once DNS propagates and the certificate is live, your app serves on the custom
+domain over HTTPS.
+</Step>
+</Steps>
+
+<Callout>
+  DNS changes can take a little while to propagate. If the domain doesn't go live
+  immediately, give it a few minutes and re-check.
+</Callout>

@@ -1,0 +1,52 @@
+---
+title: Core concepts
+description: Projects, apps, databases, and isolation on Taskclan Cloud.
+icon: Boxes
+---
+
+A few ideas make the rest of the docs easier to follow.
+
+## Projects and apps
+
+In the Taskclan Cloud console, a **project** is an **app** — a deployed service
+or static site with its own subdomain (`<name>.cloud.taskclan.com`), its own
+environment, and its own deployments. The project list is the list of your apps.
+
+## Databases
+
+An app can talk to a database in one of a few ways:
+
+- **Shared database** — the default. Apps use Taskclan's shared Postgres through
+  a public anon key, governed by row-level security.
+- **Dedicated database** — a database provisioned just for the app (managed
+  Supabase or Neon, your own Supabase via OAuth, or a bring-your-own connection
+  string). Stored as the app's `DATABASE_URL`.
+
+See [Databases](/docs/cloud/databases) for the full picture.
+
+## Isolation
+
+Taskclan runs many apps against shared infrastructure, so isolation matters:
+
+- On the **shared** database, each app is scoped by its own Postgres role and
+  row-level security — an app can only reach what it's granted.
+- A **dedicated** database is fully separate: its own instance, its own
+  credentials.
+
+<Callout>
+  Isolation is enforced by database **roles and grants**, not by trust in the
+  client. The anon key is public by design; it maps to a restricted role.
+</Callout>
+
+## Environment and secrets
+
+Configuration reaches an app as environment variables. Values are injected into
+the app's container at deploy time, so a variable added since the last deploy is
+stored but not yet live until the next one. Manage these on the app's
+[Secrets](/docs/cloud/secrets) page.
+
+## Deployments
+
+Apps deploy through Taskclan Cloud. Link a GitHub repo and a push (or an approved
+deploy) builds and ships it; the project's **Deployments** view shows status and
+history.

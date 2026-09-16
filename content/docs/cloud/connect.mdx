@@ -1,0 +1,43 @@
+---
+title: Connect your app
+description: Connection strings and keys for frameworks, ORMs, servers, and agents.
+icon: Plug
+---
+
+The **Connect** panel (top of any project) gives you everything needed to reach
+your app's database and APIs, grouped by how you're connecting.
+
+## Framework
+
+For client libraries (supabase-js and friends), use the project's REST URL and
+the public **anon key**:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=...
+NEXT_PUBLIC_SUPABASE_ANON_KEY=...
+```
+
+These are safe to ship in a client bundle — the anon key maps to a restricted,
+RLS-governed role.
+
+## ORM & Direct
+
+For an ORM (Prisma, Drizzle) or a direct `psql` connection, use the connection
+string. The **Direct** tab shows the full string; a dedicated database uses its
+own credentials, while a shared-database app connects through its scoped role.
+
+## Server
+
+Server-side code gets the REST URL, the anon key, and the `DATABASE_URL`. The
+**service role** key is never surfaced here — server secrets belong in
+[Secrets](/docs/cloud/secrets).
+
+## MCP
+
+Point an AI agent at the project over MCP using the Cloud MCP endpoint shown in
+the **MCP** tab.
+
+<Callout type="warn">
+  Never surface or commit the `service_role` key. Use the anon key on clients and
+  the connection string on servers.
+</Callout>

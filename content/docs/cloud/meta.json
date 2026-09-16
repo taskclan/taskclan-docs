@@ -1,0 +1,5 @@
+{
+  "title": "Taskclan Cloud",
+  "icon": "Cloud",
+  "pages": ["index", "projects", "databases", "connect", "secrets", "deployments", "domains"]
+}

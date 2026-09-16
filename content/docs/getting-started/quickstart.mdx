@@ -1,0 +1,64 @@
+---
+title: Quickstart
+description: Create a project on Taskclan Cloud and ship it.
+icon: Rocket
+---
+
+This walks you through creating your first project in the Taskclan Cloud console
+and getting it running.
+
+<Steps>
+
+<Step>
+### Open the console
+
+Go to [cloud.taskclan.com](https://cloud.taskclan.com) and sign in. You'll land
+on your workspace with the list of projects.
+</Step>
+
+<Step>
+### Create a new project
+
+Click **New project**. A project is a Taskclan Cloud app. Give it a name, then
+choose how it starts:
+
+- **Start empty** — create the app now and deploy to it later.
+- **Import from GitHub** — link a repository; Taskclan Cloud builds and deploys it.
+
+Pick an app type (**web service** for an API/SSR app, or **static site**).
+</Step>
+
+<Step>
+### Add a database (optional)
+
+Under **Database**, choose **Add a database** to attach one to the new app:
+
+- A **managed** database (Supabase or Neon) provisioned for you and billed to
+  your org wallet.
+- **Your own Supabase** via one-click OAuth — a dedicated project is created in
+  your own Supabase org.
+- **Bring your own** — paste any Postgres connection string.
+
+You can also skip this and use the shared database, or add one later from the
+project's **Database** page.
+</Step>
+
+<Step>
+### Create and open
+
+Click **Create project**. You'll be taken to the project, where you can browse
+the database, edit secrets, watch deployments, and connect your app.
+</Step>
+
+</Steps>
+
+## Next steps
+
+<Cards>
+  <Card title="Connect your app" href="/docs/cloud/connect" icon="Plug">
+    Get the connection details for your framework, ORM, or MCP client.
+  </Card>
+  <Card title="Manage secrets" href="/docs/cloud/secrets" icon="KeyRound">
+    Add environment variables and secrets per app.
+  </Card>
+</Cards>

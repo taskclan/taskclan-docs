@@ -1,0 +1,26 @@
+---
+title: Nani
+description: Voice-first mobile assistant for households and care.
+icon: Mic
+---
+
+**Nani** is a mobile app (iOS and Android, built with React Native / Expo) that
+puts a **voice orb** at the center of every screen. Instead of filling in forms,
+you talk to Nani — it handles household and care tasks conversationally, with
+forms as a fallback.
+
+## How it works
+
+- **Voice-orb-centric** — the orb is the hero of each screen; surfaces support it
+  rather than competing with it.
+- **Hive backend** — Nani talks to the engine through **Hive**, the intent
+  gateway (`/api/hive/v1/intent`), for both one-shot actions and the streaming
+  voice path.
+- **Design system** — screens use the Sitterly tokens, with the Luminous theme
+  reserved for voice-adjacent surfaces (the orb, voice picker, agent chat).
+
+## For contributors
+
+Nani work follows three rules: use the Sitterly/Luminous design tokens (no
+hardcoded colors), route every backend call through Hive, and keep the voice orb
+central. See the app's `DESIGN.md` and `src/lib/hive.ts` in the repo.

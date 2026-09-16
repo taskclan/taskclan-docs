@@ -1,0 +1,33 @@
+---
+title: Overview
+description: The Taskclan engine — the shared backend behind every product.
+icon: Terminal
+---
+
+The **Taskclan engine** is the shared backend that powers the products and the
+Cloud control plane. It exposes HTTP APIs at `https://engine.taskclan.com`.
+
+## API surfaces
+
+- **Cloud API** (`/api/cloud/v1/…`) — manage sites, databases, deployments, git
+  connections, and org resources. This is what the console and CLI call.
+- **Hive** (`/api/hive/v1/intent`) — the intent gateway mobile and agent clients
+  use for one-shot and streaming actions.
+- **Product APIs** (`/api/<product>/…`) — endpoints specific to individual
+  products.
+
+<Callout>
+  Most integrations only need the **Cloud API** (with an `sk_cloud_…` key) or a
+  product's own endpoints. Pick the surface that matches your use case.
+</Callout>
+
+## Next
+
+<Cards>
+  <Card title="Authentication" href="/docs/api/authentication" icon="KeyRound">
+    API keys, tokens, and how to authorize requests.
+  </Card>
+  <Card title="Conventions" href="/docs/api/conventions" icon="ListChecks">
+    Base URLs, request/response shapes, and errors.
+  </Card>
+</Cards>
