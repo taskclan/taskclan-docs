@@ -49,12 +49,12 @@ export default function HomePage() {
           className="pointer-events-none absolute inset-0 opacity-[0.07]"
           style={{
             backgroundImage:
-              'radial-gradient(circle at 20% 20%, #059669 0, transparent 40%), radial-gradient(circle at 80% 0%, #10b981 0, transparent 35%)',
+              'radial-gradient(circle at 20% 20%, #6a43d7 0, transparent 40%), radial-gradient(circle at 80% 0%, #8b6be0 0, transparent 35%)',
           }}
         />
         <div className="relative mx-auto w-full max-w-5xl px-6 py-20 md:py-28">
           <span className="inline-flex items-center gap-2 rounded-full border border-fd-border bg-fd-card px-3 py-1 text-xs text-fd-muted-foreground">
-            <span className="size-1.5 rounded-full bg-[#10b981]" />
+            <span className="size-1.5 rounded-full bg-[#8b6be0]" />
             docs.taskclan.com
           </span>
           <h1 className="mt-5 text-balance text-4xl font-bold tracking-tight md:text-5xl">

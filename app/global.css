@@ -3,19 +3,47 @@
 @import 'fumadocs-ui/css/preset.css';
 
 /*
- * Taskclan brand — emerald primary (see the Taskclan design system).
- * Overrides Fumadocs' default accent for links, buttons, active nav, and rings.
+ * Forge3D / Sitterly design tokens (the Taskclan studio design system).
+ * Purple primary, Figtree, black-not-navy dark. Values mirror
+ * forge3d/src/styles/sitterly.css (.forge-sitterly), mapped onto Fumadocs'
+ * --color-fd-* variables.
  */
 :root {
-  --color-fd-primary: #059669; /* emerald-600 — accessible on white */
+  --color-fd-background: #fdfdff;
+  --color-fd-foreground: #130240;
+  --color-fd-card: #ffffff;
+  --color-fd-card-foreground: #130240;
+  --color-fd-popover: #ffffff;
+  --color-fd-popover-foreground: #130240;
+  --color-fd-muted: #f8f8fa;
+  --color-fd-muted-foreground: #635d71;
+  --color-fd-border: #e8e8e8;
+  --color-fd-primary: #6a43d7;
   --color-fd-primary-foreground: #ffffff;
-  --color-fd-ring: #059669;
+  --color-fd-secondary: #f6f3fd;
+  --color-fd-secondary-foreground: #130240;
+  --color-fd-accent: #f6f3fd;
+  --color-fd-accent-foreground: #130240;
+  --color-fd-ring: #6a43d7;
 }
 
 .dark {
-  --color-fd-primary: #34d399; /* emerald-400 — pops on dark */
-  --color-fd-primary-foreground: #052e1a; /* deep green text on the bright button */
-  --color-fd-ring: #34d399;
+  --color-fd-background: #0a0a0d;
+  --color-fd-foreground: #f4f4f7;
+  --color-fd-card: #121217;
+  --color-fd-card-foreground: #f4f4f7;
+  --color-fd-popover: #121217;
+  --color-fd-popover-foreground: #f4f4f7;
+  --color-fd-muted: #0f0f13;
+  --color-fd-muted-foreground: #a8a8b3;
+  --color-fd-border: #26262f;
+  --color-fd-primary: #8b6be0;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-secondary: #1a1a21;
+  --color-fd-secondary-foreground: #f4f4f7;
+  --color-fd-accent: #1a1a21;
+  --color-fd-accent-foreground: #f4f4f7;
+  --color-fd-ring: #8b6be0;
 }
 
 html {
